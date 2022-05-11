@@ -1,0 +1,14 @@
+.block1{
+	background-color: #ccc;
+}
+
+.block2{
+	background-color: #9cc;
+}
+
+.block3{
+	background-color: #c9c;
+	position: relative;
+	top: 30px;
+	left: -20px;
+}

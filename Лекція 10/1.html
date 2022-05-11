@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>index</title>
+	<style type="text/css">
+		.container{
+			position: relative;
+			left: 50%;
+			transform: translate(-50%,0);
+			height: 290px;
+			margin-top: 20px;
+			box-shadow: 0px 3px 10px rgb(160,160,160);
+  			padding: 0px 2px 2px 2px;
+		}
+		.container > div{
+			position: relative;
+			display: flex;
+			flex-wrap: wrap;
+			width: 100%;
+			justify-content: space-between;
+		}
+		.c1-item{
+			position: relative;
+			background-color: rgb(255,163,52);
+		}
+		.c2-item{
+			position: relative;
+			background-color: rgb(219,237,0);
+		}
+		.c3-item{
+			position: relative;
+			background-color: rgb(74,137,209);
+		}
+		.c4-item{
+			position: relative;
+			background-color: rgb(228,228,228);
+		}
+
+		@media screen and (min-width: 769px){
+			.container{
+				width: 20%;
+			}
+
+			.c1{
+				height: 27px;
+				margin: 0px 0px 11px 0px;
+			}
+			.c2{
+				height: 94px;
+				margin: 0px 0px 10px 0px;
+			}
+			.c3{
+				height: 59px;
+				margin: 0px 0px 9px 0px;
+			}
+			.c4{
+				height: 37px;
+				flex-direction: row;
+			}
+
+			.c1-item{
+				width: calc(50% - 2px);
+				height: 100%;
+			}
+			.c2-item{
+				width: 100%;
+				height: 100%;
+			}
+			.c3-item{
+				width: calc(100%/3 - (10px / 3));
+				height: 100%;
+			}
+			.c4-item{
+				width: calc(25% - (12px / 4));
+				height: 27px;
+				margin: 0px;
+			}
+		}
+		@media screen and (max-width: 768px){
+			.container{
+				width: 40%;
+			}
+
+			.c1{
+				height: 45px;
+				margin: 0px;
+			}
+			.c2{
+				height: 65px;
+				margin: 5px 0px 6px 0px;
+			}
+			.c3{
+				height: 93px;
+				margin: 0px 0px 5px 0px;
+			}
+			.c4{
+				height: 56px;
+				flex-direction: row;
+			}
+
+			.c1-item{
+				width: 100%;
+				height: 21px;
+			}
+			.c2-item{
+				width: 100%;
+				height: 100%;
+			}
+			.c3-item{
+				width: 100%;
+				height: 29px;
+			}
+			.c4-item{
+				width: calc(50% - 4px);
+				height: 27px;
+				margin: 2px;
+			}
+		}
+		@media screen and (max-width: 320px){
+			.container{
+				width: 60%;
+			}
+
+			.c1{
+				height: 45px;
+				margin: 0px;
+			}
+			.c2{
+				height: 30px;
+				margin: 5px 0px 6px 0px;
+			}
+			.c3{
+				height: 174px;
+				margin: 0px 0px 6px 0px;
+			}
+			.c4{
+				height: 25px;
+			}
+
+			.c1-item{
+				width: 100%;
+				height: 21px;
+			}
+			.c2-item{
+				width: 100%;
+				height: 100%;
+			}
+			.c3-item{
+				width: 100%;
+				height: 55px;
+			}
+			.c4-item{
+				width: 25%;
+				height: 100%;
+				margin: 0px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="c1">
+			<div class="c1-item"></div>
+			<div class="c1-item"></div>
+		</div>
+		<div class="c2">
+			<div class="c2-item"></div>
+		</div>
+		<div class="c3">
+			<div class="c3-item"></div>
+			<div class="c3-item"></div>
+			<div class="c3-item"></div>
+		</div>
+		<div class="c4">
+			<div class="c4-item"></div>
+			<div class="c4-item"></div>
+			<div class="c4-item"></div>
+			<div class="c4-item"></div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,254 @@
+div{
+	border-radius: 5px;
+}
+.cut{
+	border-radius: 5px 5px 0px 0px;
+}
+
+.v{
+	background-color: rgb(141,67,179);
+}
+.g{
+	background-color: rgb(42,166,80);
+}
+.r{
+	background-color: rgb(231,78,51);
+}
+.b{
+	background-color: rgb(88,170,232);
+}
+
+.a-container{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
+	width: 60%;
+	height: 295px;
+	position: absolute;
+	left: 50%;
+	top: 20px;
+	transform: translate(-50%,0);
+}
+.a-container > div{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	width: calc(100%/3 - (5px*4/3));
+	height: calc(100% - (5px*2));
+}
+.a1-1-item{
+	width: 100%;
+	height: calc(44% - (5px*2/3));
+}
+.a1-2-container{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	height: calc(35% - (5px*2/3));
+}
+.a1-3-item{
+	width: 100%;
+	height: calc(21% - (5px*2/3));
+}
+.a1-2-L-item{
+	width: calc(50% - 5px/2);
+	height: 100%;
+}
+.a1-2-R-container{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	width: calc(50% - 5px/2);
+	height: 100%;
+}
+.a1-2-R-1-item{
+	width: 100%;
+	height: calc(25% - 5px/2);
+}
+.a1-2-R-2-item{
+	width: 100%;
+	height: calc(75% - 5px/2);
+}
+.a2-1-container{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	height: calc(70% - 5px/2);
+}
+.a2-2-item{
+	width: 100%;
+	height: calc(30% - 5px/2);
+}
+.a2-1-L-item{
+	width: calc(50% - 5px/2);
+	height: 100%;
+}
+.a2-1-R-container{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	width: calc(50% - 5px/2);
+	height: 100%;
+}
+.a2-1-R-1-item{
+	width: 100%;
+	height: calc(25% - 5px/2);
+}
+.a2-1-R-2-item{
+	width: 100%;
+	height: calc(75% - 5px/2);
+}
+.a3-1-item{
+	width: 100%;
+	height: calc(17.5% - 5*3px/4);
+}
+.a3-2-container{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	height: calc(17.5% - 5*3px/4);
+}
+.a3-3-item{
+	width: 100%;
+	height: calc(55% - 5*3px/4);
+}
+.a3-4-item{
+	width: 100%;
+	height: calc(10% - 5*3px/4);
+}
+.a3-2-L-item{
+	width: calc(25% - 5px/2);
+	height: 100%;
+}
+.a3-2-R-item{
+	width: calc(75% - 5px/2);
+	height: 100%;
+}
+
+
+
+.c1{
+	background-color: rgb(30,32,42);
+}
+.c2{
+	background-color: rgb(254,170,68);
+}
+.c3{
+	background-color: rgb(203,187,171);
+}
+.c4{
+	background-color: rgb(70,161,163);
+}
+.c5{
+	background-color: rgb(60,94,112);
+}
+
+
+.b-container{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: stretch;
+	position: absolute;
+	left: 50%;
+	top: 340px;
+	width: 30%;
+	height: fit-content;
+	transform: translate(-50%,0);
+}
+
+.b1-item{
+	flex-basis: 34px;
+}
+.b2-container{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: stretch;
+	flex: 131px;
+	margin: 7px 0px 6px 0px;
+}
+.b3-item{
+	flex-basis: 34px;
+}
+.b2-L-container{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: stretch;
+	flex: 34px 1 1;
+}
+.b2-L-1-item{
+	flex: 76px 1 1;
+	margin: 0px 0px 6px 0px;
+}
+.b2-L-2-item{
+	flex: 46px 1 1;
+}
+.b2-R-item{
+	flex: 157px 1 1;
+	margin: 0px 0px 0px 5px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px){
+	.b-container{
+		width: 20%;
+	}
+	.b2-container{
+		flex-direction: column-reverse;
+	}
+	.b2-L-container{
+		flex-direction: row-reverse;
+		margin: 5px 0px 0px 0px;
+	}
+	.b2-L-1-item{
+		margin: 0px 0px 0px 5px;
+		flex: 95px 1 1;
+	}
+	.b2-R-item{
+		flex: 130px 1 1;
+		margin: 0px;
+	}
+}
+
+@media screen and (min-width: 992px){
+	.b-container{
+		width: 15%;
+	}
+	.b1-item{
+		flex-basis: 24px;
+	}
+	.b2-container{
+		flex-direction: column-reverse;
+	}
+	.b3-item{
+		flex-basis: 24px;
+		margin: 0px 0px 0px 3px;
+	}
+	.b2-L-container{
+		flex-direction: column;
+		margin: 0px 0px 0px 3px;
+	}
+	.b2-L-1-item{
+		flex: 24px 1 1;
+		margin: 5px 0px 0px 0px;
+	}
+	.b2-L-2-item{
+		flex: 24px 1 1;
+		margin: 5px 0px 0px 0px;
+	}
+	.b2-R-item{
+		flex-basis: 100px;
+		margin: 0px 0px 0px 0px;
+	}
+}

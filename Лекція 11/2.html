@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>b</title>
+	<script>
+		function f1(n1, n2)
+		{
+			while(n2>=100)
+			{
+				n1++;
+				n2-=100;
+			}
+
+			let str = "Вартість замовлення: "+n1+" ";
+			if(n1%100>=5 && n1%100<=20) str+="гривень";
+			else if(n1%10===1) str+="гривня";
+			else if(n1%10>=2 && n1%10<=4) str+="гривні";
+			else str+="гривень";
+			str += " "+n2+" "
+			if(n2%100>=5 && n2%100<=20) str+="копійок";
+			else if(n2%10===1) str+="копійка";
+			else if(n2%10>=2 && n2%10<=4) str+="копійки";
+			else str+="копійок";
+			return str;
+		}
+		console.log(f1(2,75));
+		console.log(f1(0,1));
+		console.log(f1(25,3));
+		console.log(f1(20,102));
+		console.log("");
+
+		let f2 = function(n1, n2)
+		{
+			while(n2>=100)
+			{
+				n1++;
+				n2-=100;
+			}
+
+			let str = "Вартість замовлення: "+n1+" ";
+			if(n1%100>=5 && n1%100<=20) str+="гривень";
+			else if(n1%10===1) str+="гривня";
+			else if(n1%10>=2 && n1%10<=4) str+="гривні";
+			else str+="гривень";
+			str += " "+n2+" "
+			if(n2%100>=5 && n2%100<=20) str+="копійок";
+			else if(n2%10===1) str+="копійка";
+			else if(n2%10>=2 && n2%10<=4) str+="копійки";
+			else str+="копійок";
+			return str;
+		}
+		console.log(f2(2,75));
+		console.log(f2(0,1));
+		console.log(f2(25,3));
+		console.log(f2(20,102));
+		console.log("");
+
+		let f3 = (n1, n2) =>
+		{
+			while(n2>=100)
+			{
+				n1++;
+				n2-=100;
+			}
+
+			let str = "Вартість замовлення: "+n1+" ";
+			if(n1%100>=5 && n1%100<=20) str+="гривень";
+			else if(n1%10===1) str+="гривня";
+			else if(n1%10>=2 && n1%10<=4) str+="гривні";
+			else str+="гривень";
+			str += " "+n2+" "
+			if(n2%100>=5 && n2%100<=20) str+="копійок";
+			else if(n2%10===1) str+="копійка";
+			else if(n2%10>=2 && n2%10<=4) str+="копійки";
+			else str+="копійок";
+			return str;
+		}
+		console.log(f3(2,75));
+		console.log(f3(0,1));
+		console.log(f3(25,3));
+		console.log(f3(20,102));
+		console.log("");
+	</script>
+</head>
+<body></body>
+</html>

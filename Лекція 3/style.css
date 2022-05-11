@@ -1,0 +1,36 @@
+.main{
+	position: absolute;
+	width: 40%;
+	left: 50%;
+	transform: translate(-50%, 0);
+	background-color: #fdff99;
+	padding-bottom: 20px;
+	min-width: 200px;
+}
+
+.title{
+	background-color: #ffcc01;
+}
+
+h4{
+	height: 25px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-top: 5px;
+	display: block;
+}
+
+td{
+	height: 30px;
+}
+
+.label{
+	width: 40%;
+	text-align: right;
+	valign: top;
+	padding-right: 10p
+}
+
+.input{
+	width: 45%;
+}

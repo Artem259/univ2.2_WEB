@@ -1,0 +1,46 @@
+body{
+	margin: 0px;
+	padding: 0px;
+}
+
+.header, .footer{
+	color: #ffffff;
+	background: rgb(83,5,5);
+	position: absolute;
+	width: 100%;
+	height: 100px;
+	padding: 5px;
+	box-sizing: border-box;
+}
+
+.left, .right{
+	color: #000000;
+	background: rgb(189,100,100);
+	position: absolute;
+	top: 100px;
+	width: 15%;
+	height: calc(100% - 200px);
+	padding: 5px;
+	box-sizing: border-box;
+}
+
+.content{
+	color: #000000;
+	background: rgb(185,58,58);
+	position: absolute;
+	top: 100px;
+	width: 70%;
+	left: 15%;
+	height: calc(100% - 200px);
+	min-height: 50px;
+	padding: 5px;
+	box-sizing: border-box;
+}
+
+.right{
+	left: 85%;
+}
+
+.footer{
+	top: calc(100% - 100px);
+}

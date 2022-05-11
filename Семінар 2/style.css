@@ -1,0 +1,52 @@
+body{
+	padding-left: 25px;
+	font-family: Book Antiqua;
+}
+
+h1{
+	height: 20px;
+	min-width: 600px;
+}
+
+h4{
+	font-weight: 400;
+	min-width: 500px;
+}
+
+fieldset{
+	width: 500px;
+	margin-bottom: 15px;
+	margin-left: 0px;
+}
+
+legend{
+	font-weight: 600;
+}
+
+.left_td{
+	width: 100px;
+	height: 30px;
+	padding-right: 20px;
+	transform: translate(0px,5px);
+}
+
+.right_td > input{
+	width: 200px;
+}
+
+.right_td > textarea{
+	width: 200px;
+	height: 80px;
+}
+
+.right_td > select{
+ 	width: 208px;
+ 	height: 22px;
+ 	margin: 0;
+ 	padding: 0;
+ }
+
+.submit{
+	height: 40px;
+	width: 180px;
+}

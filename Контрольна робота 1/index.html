@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>SpaceX</title>
+	<style type="text/css">
+		body{
+			padding: 0px;
+			margin: 0px;
+			background-image: url("https://img.freepik.com/free-vector/space-seamless-pattern-vector-kids-seamless-texture-with-doodle-rocket-planet-stars-space-universe-illustration-rocket-planet-star-asteroid_53562-11865.jpg?w=2000");
+			background-size: 400px;
+			text-align: justify;
+			font-family: Calibri;
+			font-size: 12px;
+		}
+		h3{
+			margin: 12px 0px 7px 0px;
+		}
+		ul{
+			margin: 0;
+		    padding-left: 15px;
+		    list-style-type: '✦ ';
+		}
+		li{
+			margin-bottom: 6px;
+		}
+
+		.font-yellow{
+			background-color: yellow;
+		}
+
+		.background{
+			position: absolute;
+			width: 850px;
+			height: 1200px;
+			left: 50%;
+			transform: translate(-50%,0);
+			background-color: rgb(192,196,225);
+			box-shadow: 0px 0px 30px rgb(0,0,0);
+			overflow: hidden;
+		}
+		.header-line{
+			position: relative;
+			width: 100%;
+			height: 60px;
+			background-color: rgb(0,0,0);
+			z-index: -1;
+		}
+		.top-strip{
+			position: absolute;
+			width: 100%;
+			height: 150px;
+			top: 30px;
+			background-color: rgba(60,60,100,0.25);
+			transform: skewY(-2deg);
+			z-index: -2;
+		}
+		.bottom-strip{
+			position: absolute;
+			width: 100%;
+			height: 130px;
+			top: calc(100% - 100px);
+			transform: translate(0,-100%);
+			background-color: rgba(60,60,100,0.25);
+			transform: skewY(-2deg);
+			z-index: -2;
+		}
+		.left-strip{
+			position: absolute;
+			width: 280px;
+			top: 60px;
+			height: calc(100% - 60px);
+			background-color: rgb(145,150,181);
+			z-index: -3;
+		}
+
+		.content{
+			position: absolute;
+			width: 850px;
+			height: calc(1200px - 60px);
+			top: 60px;
+			left: 50%;
+			transform: translate(-50%,0);
+		}
+		.left-container{
+			position: absolute;
+			width: 280px;
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-end;
+		}
+		.left-container > div{
+			background-color: rgba(0,0,255,1);
+		}
+		.left-img0{
+			width: 100px;
+			height: 170px;
+			margin: 50px 60px 70px 00px;
+			box-shadow: 8px 8px 15px rgb(0,0,0);
+			background-image: url("https://www.orlandosentinel.com/resizer/6gAYPzJFc47BVzhBa4-xeh6xK6E=/415x276/top/arc-anglerfish-arc2-prod-tronc.s3.amazonaws.com/public/EUVCBC3XCYTIUGD4LKKFV3D7LU.jpg");
+			background-size: cover;
+			background-position: -45px;
+		}
+		.left-img1{
+			width: 220px;
+			height: 190px;
+			margin-bottom: 20px;
+			background-image: url("https://bloximages.chicago2.vip.townnews.com/lompocrecord.com/content/tncms/assets/v3/editorial/4/76/476082a1-7be5-5698-99cc-bab276e34fb3/5bb2cc00a08e1.image.jpg?resize=1396%2C930");
+			background-size: cover;
+				background-position: -30px 0px;
+		}
+		.left-img2{
+			width: 220px;
+			height: 185px;
+			margin-bottom: 20px;
+			background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0pn1o71Y_vnVtcyQjSmvNp0tYjXwL3jzVIQ&usqp=CAU");
+			background-size: cover;
+		}
+		.left-img3{
+			width: 220px;
+			height: 130px;
+			margin-bottom: 20px;
+			background-image: url("https://thumbs.dreamstime.com/b/%D0%BE%D0%B5-%D0%B4%D0%B5%D0%BA%D0%B0%D0%B1%D1%80%D1%8F-hawthorne-%D0%BB%D0%BE%D1%81-%D0%B0%D0%BD%D0%B4%D0%B6%D0%B5%D0%BB%D0%B5%D1%81-ca-%D1%81%D1%88%D0%B0-spacex-%D0%BA%D0%BE%D1%81%D0%BC%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B5-%D0%B8%D1%81%D1%81%D0%BB%D0%B5%D0%B4%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-167114818.jpg");
+			background-size: cover;
+		}
+		.left-img4{
+			width: 220px;
+			height: 130px;
+			background-image: url("http://spaceflightnow.com/wp-content/uploads/2020/12/sn8_sunrise.jpg");
+			background-size: cover;
+			background-position: 0px -10px;
+		}
+		.right-container{
+			position: absolute;
+			width: calc(850px - 280px);
+			height: 100%;
+			left: 280px;
+			padding: 64px 55px 0px 40px;
+			box-sizing: border-box;
+		}
+		.right-top-text
+		{
+			position: relative;
+			margin-bottom: 55px;
+		}
+		.right-img{
+			position: relative;
+			width: 100%;
+			height: 255px;
+			background-image: url("https://inbusiness.kz/ru/images/small/37/images/Qm0gLBXj.jpeg");
+			background-size: cover;
+		}
+		.right-bottom-container{
+			position: relative;
+			width: 100%;
+			height: fit-content;
+			display: flex;
+			justify-content: space-between;
+		}
+		.right-bottom-text-item{
+			width: 230px;
+		}
+	</style>
+</head>
+<body>
+
+<div class="background">
+	<div class="header-line"></div>
+	<div class="top-strip"></div>
+	<div class="bottom-strip"></div>
+	<div class="left-strip"></div>
+</div>
+<div class="content">
+	<div class="left-container">
+		<div class="left-img0"></div>
+		<div class="left-img1"></div>
+		<div class="left-img2"></div>
+		<div class="left-img3"></div>
+		<div class="left-img4"></div>
+	</div>
+	<div class="right-container">
+		<div class="right-top-text">
+			Space Exploration Technologies Corp. (doing business as SpaceX) is an American aerospace manufacturer, a provider of space transportation services, and a communications corporation headquartered in Hawthorne, California. SpaceX was founded in 2002 by Elon Musk with the goal of reducing space transportation costs to enable the colonization of Mars. SpaceX manufactures the Falcon 9 and Falcon Heavy launch vehicles, several rocket engines, Cargo Dragon, crew spacecraft, and Starlink communications satellites.
+		</div>
+		<div class="right-img"></div>
+		<div class="right-bottom-container">
+			<div class="right-bottom-text-item">
+				<h3>Launch vehicles</h3>
+				SpaceX has developed three launch vehicles. The small-lift Falcon 1 was the first launch vehicle developed and was retired in 2009. The medium-lift Falcon 9 and the heavy-lift Falcon Heavy are both operational. The vehicle was upgraded to Falcon 9 v1.1 in 2013, Falcon 9 Full Thrust in 2015, and finally to Falcon 9 Block 5 in 2018.
+				<h3>Rocket engines</h3>
+				The company has developed several rocket engines – Merlin, Kestrel, and Raptor for use in launch vehicles, Draco for the reaction control system of the Dragon series of spacecraft, and SuperDraco for abort capability in Crew Dragon. SpaceX continues to conduct further test flights of the Starship vehicle in 2020 and 2021.
+				<h3>Dragon spacecraft</h3>
+				SpaceX has developed the Dragon spacecraft to transport cargo and crew to the International Space Station. The first version of Dragon was first launched in 2010. The currently operational second generation Dragon spacecraft known as Dragon 2.
+				<h3>Autonomous spaceport drone ships</h3>
+				When propellent margins do not permit a return to launch site (RTLS), rockets return to floating landing platform in the ocean, called autonomous spaceport drone ships (ASDS).
+				<h3>Starship</h3>
+				Starship is a <span class="font-yellow">fully reusable super heavy</span>-lift launch vehicle that is currently being developed and manufactured by SpaceX. The rocket will consist of the Super Heavy booster stage and the Starship spacecraft on top, and will be mainly constructed out of steel.
+			</div>
+			<div class="right-bottom-text-item">
+				<h3>Headquarters, manufacturing, and refurbishment facilities</h3>
+				SpaceX Headquarters is located in the Los Angeles suburb of Hawthorne, California. The large three-story facility, originally built by Northrop Corporation to build Boeing 747 fuselages, houses SpaceX's office space, mission control, and Falcon 9 manufacturing facilities.
+				<h3>Summary of achievements</h3>
+				<ul>
+					<li>First privately funded fully liquid-fueled rocket to reach orbit</li>
+					<li>First private company to successfully launch, orbit, and recover a spacecraft</li>
+					<li>First private company to send a spacecraft to the ISS</li>
+					<li>First landing of an orbital-class rocket's first stage on land</li>
+					<li>First landing of an orbital-class rocket's first stage on an ocean platform</li>
+					<li>First controlled flyback and recovery of a payload fairing</li>
+					<li>First private company to send a human-rated spacecraft to orbit</li>
+					<li>Largest commercial satellite constellation operator in the world</li>
+					<li>First private company to send humans into orbit</li>
+					<li>First reuse and reflight of a crewed space capsule</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,172 @@
+body{
+   cursor: default;
+   -moz-user-select: none; 
+   -webkit-user-select: none; 
+   -ms-user-select:none; 
+   user-select:none;
+   -o-user-select:none;
+}
+
+.header{
+   height: fit-content;
+   padding-bottom: 175px;
+   background-image: url("https://www.publicdomainpictures.net/pictures/210000/nahled/new-york-night-skyline-1485446315k9O.jpg");
+   background-size: cover;
+   background-position: center;
+   padding-top: 20px;
+}
+#mainNav{
+   padding-top: 1.5rem;
+   padding-bottom: 1.5rem;
+   border: none;
+   background-color: transparent;
+   transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
+}
+.logo-img{
+   width: 30px;
+   transform: translate(0,-3px);
+}
+#mainNav .navbar-nav .nav-item .nav-link{
+   font-size: 0.95rem;
+   color: #fff;
+   letter-spacing: 0.0625em;
+   margin-left: 20px;
+}
+.nav-link{
+   display: block;
+   padding: 0.5rem 1rem;
+   color: #ffc800;
+   text-decoration: none;
+   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}
+.navbar-brand{
+   color: #ffc800;
+   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+   font-weight: 500;
+   letter-spacing: 0.0625em;
+   text-transform: uppercase;
+   padding-top: 0.3125rem;
+   padding-bottom: 0.3125rem;
+   margin-right: 1rem;
+   font-size: 1.25rem;
+   text-decoration: none;
+   white-space: nowrap;
+}
+#mainNav .navbar-nav .nav-item .nav-link:hover:not(.active-item) {
+   cursor: pointer;
+   color: #ffc800;
+}
+
+.btn-primary{
+   color: #fff;
+   background-color: #ffc800;
+   border-color: #ffc800;
+}
+.btn-primary:hover{
+   color: #fff;
+   background-color: #d9aa00;
+   border-color: #cca000;
+}
+
+.header-title{
+   margin-top: 175px;
+   margin-bottom: 25px;
+}
+.header-btn{
+   width: calc(50% - 10px);
+   font-size: 18px;
+}
+
+.table{
+   margin-bottom: 100px;
+}
+.table-title{
+   margin-top: 75px;
+   margin-bottom: 60px;
+}
+.table-text{
+   padding: 0px 25px 0px 25px;
+   font-size: 13px;
+}
+.table-block{
+   width: calc(100%/3 - 10px);
+   box-shadow: 0 0 20px rgb(210,210,210);
+}
+
+.big-img{
+   height: fit-content;
+   padding-bottom: 175px;
+   background-image: url("http://www.gd.ru/images/articles/8882/delovaya-vstrecha_500.jpg");
+   background-size: cover;
+   padding-top: 20px;
+}
+.big-img-title{
+   margin-top: 100px;
+   margin-bottom: 25px;
+}
+
+.squares{
+   position: relative;
+   top: -80px;
+}
+.squares-container-item{
+   width: calc(50% - 8px);
+   background-color: rgb(238,238,238);
+   margin-bottom: 16px;
+   padding: 30px 50px 40px 50px;
+}
+.squares-container-item > h1{
+   color: #ffc800;
+   font-size: 100px;
+}
+.squares-container-item-text{
+   margin-top: 20px;
+   font-size: 13px;
+}
+
+.line{
+   background-color: #ffc800;
+   height: 225px;
+   box-sizing: border-box;
+   padding-top: 100px;
+}
+
+.grid{
+   margin: 100px 0px 35px 0px;
+}
+.grid-block{
+   width: calc(50% - 8px);
+   margin-bottom: 65px;
+   font-size: 13px;
+}
+.grid-block > button{
+   font-size: 13px;
+}
+.grid-block-img{
+   background-image: url("https://s.inalmaty.kz/section/afisha_event/upload/pers/125/img/afisha/000/000/013/biznes-vstreca-razvitie-biznesa-v-oblakah_5da03d8a85dbb.jpg");
+   background-size: cover;
+}
+
+.footer-line{
+   background-image: url("https://media-exp1.licdn.com/dms/image/C4D1BAQEYBBlhx6elvQ/company-background_10000/0/1531931438374?e=2147483647&v=beta&t=H6i672ZbLbBXArXdCCYUoiRX9w_wyd_4pANhID9ShyU");
+   background-size: cover;
+   background-position: center;
+   padding: 75px 0px 75px 0px;
+}
+.footer-line-container > div{
+   display: inline-block;
+}
+.footer-line-btn{
+   width: 80%;
+   height: 50px;
+   position: relative;
+   top: 50%;
+   transform: translate(0,-50%);
+}
+
+.last-line{
+   background-color: #ffc800;
+   height: 35px;
+   box-sizing: border-box;
+   padding-top: 5px;
+}

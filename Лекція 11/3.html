@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>c</title>
+	<script>
+		function getQuarter(x1,y1)
+		{
+			if(x1>0 && y1>0) return 1;
+			if(x1<0 && y1>0) return 2;
+			if(x1<0 && y1<0) return 3;
+			if(x1>0 && y1<0) return 4;
+		}
+
+		function f1([x1,y1], [x2,y2])
+		{
+			if((x1===0 || y1===0) && (x2===0 || y2===0))
+			{
+				return "Both points are on the axis.";
+			}
+			if(x1===0 || y1===0)
+			{
+				return "The first point is on the axis.";
+			}
+			if(x2===0 || y2===0)
+			{
+				return "The second point is on the axis.";
+			}
+			if(x1*x2>0 && y1*y2>0)
+			{
+				return Math.sqrt(Math.pow(x2-x1, 2)+Math.pow(y2-y1, 2));
+			}
+			return [getQuarter(x1,y1), getQuarter(x2,y2)];
+		}
+		console.log(f1([5,3], [8,7]));
+		console.log(f1([5,-3], [-8,-7]));
+		console.log(f1([5,0], [8,7]));
+		console.log(f1([5,3], [0,7]));
+		console.log(f1([5,0], [0,7]));
+		console.log("");
+
+		let f2 = function([x1,y1], [x2,y2])
+		{
+			if((x1===0 || y1===0) && (x2===0 || y2===0))
+			{
+				return "Both points are on the axis.";
+			}
+			if(x1===0 || y1===0)
+			{
+				return "The first point is on the axis.";
+			}
+			if(x2===0 || y2===0)
+			{
+				return "The second point is on the axis.";
+			}
+			if(x1*x2>0 && y1*y2>0)
+			{
+				return Math.sqrt(Math.pow(x2-x1, 2)+Math.pow(y2-y1, 2));
+			}
+			return [getQuarter(x1,y1), getQuarter(x2,y2)];
+		}
+		console.log(f2([5,3], [8,7]));
+		console.log(f2([5,-3], [-8,-7]));
+		console.log(f2([5,0], [8,7]));
+		console.log(f2([5,3], [0,7]));
+		console.log(f2([5,0], [0,7]));
+		console.log("");
+
+		let f3 = ([x1,y1], [x2,y2]) =>
+		{
+			if((x1===0 || y1===0) && (x2===0 || y2===0))
+			{
+				return "Both points are on the axis.";
+			}
+			if(x1===0 || y1===0)
+			{
+				return "The first point is on the axis.";
+			}
+			if(x2===0 || y2===0)
+			{
+				return "The second point is on the axis.";
+			}
+			if(x1*x2>0 && y1*y2>0)
+			{
+				return Math.sqrt(Math.pow(x2-x1, 2)+Math.pow(y2-y1, 2));
+			}
+			return [getQuarter(x1,y1), getQuarter(x2,y2)];
+		}
+		console.log(f3([5,3], [8,7]));
+		console.log(f3([5,-3], [-8,-7]));
+		console.log(f3([5,0], [8,7]));
+		console.log(f3([5,3], [0,7]));
+		console.log(f3([5,0], [0,7]));
+		console.log("");
+	</script>
+</head>
+<body></body>
+</html>

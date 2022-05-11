@@ -1,0 +1,15 @@
+.block1{
+	background-color: #ccc;
+}
+
+.block2{
+	background-color: #9cc;
+}
+
+.block3{
+	background-color: #c9c;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: fit-content;
+}

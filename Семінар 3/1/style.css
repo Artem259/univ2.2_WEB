@@ -1,0 +1,39 @@
+body{
+	font-family: Century Schoolbook;
+}
+
+h1{
+	margin: 0;
+}
+
+p > span{
+	display: block;
+	white-space: nowrap;
+}
+
+a{
+	color: rgb(28,18,137);
+	text-decoration: underline;
+}
+
+.i{
+	font-style: italic;
+}
+
+.b{
+	font-weight: bold;
+}
+
+.red{
+	color: #ff0000;
+}
+
+.bg-yellow
+{
+	background-color: #ffff00;
+}
+
+.s1{
+	font-size: 1.3em;
+	font-weight: bolder;
+}
