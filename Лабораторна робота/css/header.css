@@ -1,0 +1,60 @@
+header{
+	height: 230px;
+	background-color: rgb(204,213,236);
+	color: rgb(118,118,118);
+}
+
+.header-img-container{
+    height: 100px;
+}
+.header-text{
+	position: absolute;
+	left: 120px;
+	top: 115px;
+}
+.header-title{
+	font-family: "Sofia";
+	line-height: 26px;
+	margin: 0;
+	width: 150px;
+}
+.header-comment{
+	font-size: 16px;
+	margin-top: 5px;
+	padding-top: 5px;
+}
+
+.header-right{
+	position: absolute;
+	right: 10px;
+	top: 50px;
+}
+.header-numbers{
+	font-size: 30px;
+	font-family: "Karla";
+}
+.header-feedback{
+	text-align: right;
+	text-decoration: underline;     
+    text-decoration-style: dotted;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    padding-top: 5px;
+    width: fit-content;
+    float: right;
+    font-size: 22px;
+}
+.header-feedback:hover{
+	cursor: pointer;
+	text-decoration-style: solid;
+}
+
+@font-face{
+  font-family: "Karla";
+  src: url('https://fonts.gstatic.com/s/karla/v22/qkBIXvYC6trAT55ZBi1ueQVIjQTD-JqaE0lK.eot'); /* IE9 Compat Modes */
+  src: url('https://fonts.gstatic.com/s/karla/v22/qkBIXvYC6trAT55ZBi1ueQVIjQTD-JqaE0lK.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('https://fonts.gstatic.com/s/karla/v22/qkBIXvYC6trAT55ZBi1ueQVIjQTD-JqaE0lK.woff2') format('woff2'), /* Super Modern Browsers */
+       url('https://fonts.gstatic.com/s/karla/v22/qkBIXvYC6trAT55ZBi1ueQVIjQTD-JqaE0lK.woff') format('woff'), /* Pretty Modern Browsers */
+       url('https://fonts.gstatic.com/s/karla/v22/qkBIXvYC6trAT55ZBi1ueQVIjQTD-JqaE0lK.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('https://fonts.gstatic.com/s/karla/v22/qkBIXvYC6trAT55ZBi1ueQVIjQTD-JqaE0lK.svg#svgFontName') format('svg'); /* Legacy iOS */
+}

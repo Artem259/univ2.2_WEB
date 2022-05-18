@@ -1,0 +1,174 @@
+.leftblock{
+	display: inline-block;
+	float: left;
+	width: 200px;
+	font-size: 18px;
+	color: rgb(118,118,118);
+}
+.centerblock{
+	display: inline-block;
+	float: right;
+	width: calc(100% - 200px);
+}
+
+.leftblock-outer-list{
+	list-style: none;
+	margin: 10px 0px 0px 0px;
+	padding: 0;
+	line-height: 30px;
+}
+.leftblock-inner-list{
+	list-style: disc;
+	margin: 0px 0px 5px -15px;
+	line-height: 20px;
+	font-size: 14px;
+}
+.leftblock-inner-list > li > span{
+	position: relative;
+	left: -5px;
+}
+.leftblock-inner-list-active > span{
+	font-weight: bold;
+	color: rgb(0,0,0);
+}
+
+.leftblock-logo-container{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: absolute;
+	left: 25px;
+	top: 380px;
+}
+.leftblock-logo-img{
+	height: 100px;
+	width: 100px;
+	border: 8px solid rgb(0,0,0);
+	box-sizing: border-box;
+	background-image: url("../img/telescope_1.jpg");
+	background-size: cover;
+	-webkit-box-reflect: below 1px linear-gradient(transparent 85%, rgba(255,255,255,0.3));
+}
+.leftblock-logo-text{
+	margin: 15px 0px 0px 0px;
+	color: rgb(68,68,68);
+	font-weight: 900;
+}
+
+.centerblock-blocks-container{
+	display: flex;
+	flex-wrap: wrap;
+	width: calc(100% + 15px);
+}
+
+.centerblock-block{
+	width: 250px;
+	height: 380px;
+	margin: 20px 15px 0px 0px;
+	padding: 20px 20px 0px 20px;
+	background-color: rgb(204,213,236);
+	box-sizing: border-box;
+	transition: ease-in-out 0.2s;
+}
+.centerblock-block:hover{
+	cursor: pointer;
+	box-shadow: 0 0 10px rgb(50,50,50);
+}
+.centerblock-block-img{
+	height: 210px;
+	width: 210px;
+	background-size: cover;
+	background-position: center;
+}
+.centerblock-block-text{
+	height: 90px;
+	margin: 10px 0px 0px 0px;
+	font-size: 18px;
+	color: rgb(118,118,118);
+}
+.centerblock-block-price{
+	margin: 5px;
+	color: rgb(68,68,68);
+}
+.centerblock-block-basket-img{
+	position: relative;
+	float: right;
+	width: 35px;
+	height: 30px;
+	top: -40px;
+	background-image: url("../img/basket.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	transition: ease-in-out 0.2s;
+}
+.centerblock-block-basket-img:hover{
+	cursor: pointer;
+	transform: scale(1.1);
+}
+
+.img1{
+	background-image: url("../img/img1.jpg");
+}
+.img2{
+	background-image: url("../img/img2.jpg");
+}
+.img3{
+	background-image: url("../img/img3.jpg");
+}
+.img4{
+	background-image: url("../img/img4.jpg");
+}
+.img5{
+	background-image: url("../img/img5.jpg");
+}
+
+.centerblock-pages{
+	display: flex;
+	position: relative;
+	margin: 27px 0px 65px 0px;
+	justify-content: center;
+	align-items: flex-end;
+	font-size: 14px;
+	color: rgb(118,118,118);
+}
+.centerblock-pages > div{
+	width: 28px;
+	height: fit-content;
+	text-align: center;
+}
+.centerblock-pages > div:hover{
+	text-underline-offset: 2px;
+}
+.centerblock-pages > div:not(.centerblock-pages-active):hover{
+	font-size: 16px;
+}
+.centerblock-pages-active{
+	position: relative;
+	top: 1px;
+	font-size: 18px;
+	color: rgb(0,0,0);
+}
+
+.centerblock-line{
+	margin: 0;
+}
+
+.centerblock-text-container{
+	min-height: 415px;
+	font-size: 14px;
+	line-height: 22px;
+	color: rgb(118,118,118);
+}
+.centerblock-text-left{
+	display: inline-block;
+	float: left;
+	width: 370px;
+	margin: 23px 0px 23px 0px;
+}
+.centerblock-text-right{
+	display: inline-block;
+	float: right;
+	width: 370px;
+	margin: 23px 0px 23px 0px;
+}

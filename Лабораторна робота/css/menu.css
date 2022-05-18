@@ -1,0 +1,36 @@
+.menu{
+	height: 80px;
+	background-color: rgb(67,78,116);
+}
+.menu-container{
+	width: fit-content;
+	padding-top: 20px;
+}
+
+.menu-container > ul{
+	list-style-type: "|";
+  	margin: 0;
+  	padding: 0;
+}
+.menu-container > ul > li{
+	color: rgb(255,255,255);
+	float: left;
+	padding: 0px 25px 0px 25px;
+	font-size: 26px;
+	margin-right: 5px;
+}
+.menu-container > ul > li > span{
+	display: block;
+	text-align: center;
+	text-decoration: none;
+}
+.menu-container > ul > li:first-child{
+	list-style: none;
+}
+
+.menu-container > ul > li:hover{
+	cursor: pointer;
+	text-decoration: underline;    
+	text-decoration-style: solid;
+	text-underline-offset: 2px;
+}

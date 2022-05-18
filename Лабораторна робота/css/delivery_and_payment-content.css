@@ -1,0 +1,17 @@
+.content{
+	padding-bottom: 50px;
+}
+
+.content-title{
+	font-size: 18px;
+	color: rgb(68,68,68);
+}
+.content-title h2{
+	margin: 20px 0px 10px 0px;
+}
+
+.content-text{
+	font-size: 14px;
+	line-height: 22px;
+	color: rgb(118,118,118);
+}

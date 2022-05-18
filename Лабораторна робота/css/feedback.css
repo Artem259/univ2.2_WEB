@@ -1,0 +1,130 @@
+#feedback{
+	display: none;
+	position: fixed;
+	width: 100%;
+	min-width: calc(465px + 27px);
+	height: 100%;
+	background-color: rgba(0,0,0,0.6);
+	opacity: 0;
+	transition: opacity 1s;
+	z-index: 999;
+}
+#feedback.shown{
+    opacity: 1;
+}
+.feedback-container{
+	position: fixed;
+	width: 492px;
+	height: 607px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-246px, -304px);
+}
+@media screen and (max-height: 607px){
+	.feedback-container{
+		position: absolute;
+		height: 100%;
+		top: 0;
+		left: 50%;
+		transform: translate(-246px,0);
+		overflow: scroll;
+	}
+}
+
+.feedback-window{
+	position: relative;
+	float: left;
+	top: 27px;
+	width: 465px;
+	height: 580px;
+	background-color: rgb(255,255,255);
+}
+
+#feedback-close{
+	position: relative;
+	float: right;
+	width: 27px;
+	height: 27px;
+	background-color: rgb(67,78,116);
+	background-image: url("../img/close.png");
+	background-repeat: no-repeat;
+	background-size: 70%;
+	background-position: center 4px;
+	transition: ease-in-out 0.2s;
+}
+
+#feedback-close:hover{
+	cursor: pointer;
+	background-color: rgb(87,98,136);
+}
+
+.feedback-window{
+	box-sizing: border-box;
+	padding: 28px 62px 0px 62px;
+	color: rgb(83,83,83);
+}
+.feedback-window > h2{
+	margin: 0px 0px 24px 0px;
+	text-align: center;
+}
+
+.feedback-form-item{
+	margin-top: 15px;
+}
+.feedback-form-item-title{
+	text-align: center;
+	font-size: 14px;
+	margin-bottom: 4px;
+}
+.feedback-form-item-input{
+	position: relative;
+  	width: 100%;
+  	height: 42px;
+  	padding: 0px 10px;
+  	box-sizing: border-box;
+  	border: 1px solid rgb(83,83,83);
+  	border-radius: 3px;
+}
+.feedback-form-item-input::placeholder{
+	font-style: italic;
+	color: rgb(255,0,0);
+}
+.feedback-form-item-textarea{
+	position: relative;
+  	width: 100%;
+	height: 142px;
+	padding: 5px 10px;
+	box-sizing: border-box;
+	resize: none;
+	border: 1px solid rgb(83,83,83);
+  	border-radius: 3px;
+}
+
+.input-invalid{
+	box-shadow: inset 0 0 12px rgba(255,0,0,0.4);
+	border: 1px solid rgb(255,0,0);
+
+}
+
+#feedback-form-submit{
+	position: relative;
+	width: 127px;
+	height: 42px;
+	left: 50%;
+	top: 20px;
+	text-align: center;
+	padding-top: 9px;
+	box-sizing: border-box;
+	border-radius: 5px;
+	font-weight: 700;
+	font-size: 18px;
+	letter-spacing: 1px;
+	transform: translate(-50%,0);
+	color: rgb(255,255,255);
+	background-color: rgb(67,78,116);
+	transition: ease-in-out 0.2s;
+}
+#feedback-form-submit:hover{
+	cursor: pointer;
+	background-color: rgb(87,98,136);
+}

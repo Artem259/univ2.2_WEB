@@ -1,0 +1,41 @@
+footer{
+    margin-top: auto;
+    height: 220px;
+    line-height: 22px;
+    background-color: rgb(67,78,116);
+    font-size: 14px;
+    color: rgb(255,255,255);
+}
+
+.footer-container{
+    display: flex;
+    padding-top: 50px;
+}
+.footer-container-left{
+    width: 200px;
+}
+.footer-container-middle{
+    width: 220px;
+    padding: 0px 0px 0px 150px;
+}
+.footer-container-right{
+    width: 410px;
+}
+.footer-container-right > div{
+    display: flex;
+    float: right;
+    width: fit-content;
+}
+.footer-container-middle > ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-top: -5px;
+}
+.footer-container-right-img{
+    background-image: url("../img/telescope_2.jpg");
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+    margin-right: 5px;
+}
