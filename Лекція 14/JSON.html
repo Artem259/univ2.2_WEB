@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JSON</title>
+	<style type="text/css">
+		
+	</style>
+</head>
+<body>
+	<script>
+		function Image(name, path, date){
+			this.name = name || "";
+			this.path = path || "";
+			this.date = new Date(date) || new Date();
+		}
+		function Gallery(images){
+			this.images = [];
+			images.forEach(image =>{
+				if(image == null)
+					return;
+				if(image instanceof Image)
+					this.images.push(image);
+				else
+					this.images.push(new Image(image.name, image.path, image.date));
+			});
+		}
+
+		function parseGallery(json){
+			let gallery = new Gallery(JSON.parse(json)["images"]);
+			return gallery;
+		}
+
+
+		let myGallery = new Gallery([
+			new Image("Картинка1", "Шлях1", "December 17, 2012 03:24:00"),
+			new Image("", "Шлях2", "October 20, 2007 16:20:34"),
+			new Image("Картинка3", "Шлях3", "November 14, 2021 06:46:28"),
+			new Image("Картинка4", "Шлях4", "January 29, 2019 08:41:16"),
+			new Image("Картинка5", "", "December 8, 2020 22:56:13")
+		]);
+		console.log(myGallery);
+
+
+		let json1 = JSON.stringify(myGallery, null, 2);
+		console.log(json1);
+
+		let json2 = JSON.stringify(myGallery, (key, value) =>{
+			if((value && typeof value === "object") || key == "name")
+				return value;
+			return undefined;
+		}, 2);
+		console.log(json2);
+
+		let json3 = JSON.stringify(myGallery, (key, value) =>{
+			if(value && typeof value === "object")
+				if(value instanceof Image && value.name == "")
+					return undefined;
+			return value;
+		}, 2);
+		console.log(json3);
+
+
+		console.log(parseGallery(json1));
+		console.log(parseGallery(json2));
+		console.log(parseGallery(json3));
+	</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Objects</title>
+	<style type="text/css">
+		
+	</style>
+</head>
+<body>
+	<script>
+		function addProperty(object, key, value){
+			if(key in object)
+				return object;
+			object[key] = value;
+			return object;
+		}
+
+		function iterate1(object){
+			for(prop in object){
+				console.log(prop + ": " + object[prop]);
+			}
+		}
+		function iterate2(object){
+			Object.keys(object).forEach(prop =>{
+			  console.log(prop + ": " + object[prop]);
+			});
+		}
+
+		
+		let a = {key1:"value1", key2:"value2"};
+		a = addProperty(a, "key2", "value2_2");
+		console.log(a); //{key1: 'value1', key2: 'value2'}
+		a = addProperty(a, "key3", "value3");
+		console.log(a); //{key1: 'value1', key2: 'value2', key3: 'value3'}
+		console.log("\n");
+
+		iterate1(a);
+		console.log("\n");
+		iterate2(a);
+	</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>DateTime</title>
+	<style type="text/css">
+		*{
+			font-family: "Calibri";
+		}
+	</style>
+</head>
+<body>
+	<h2 id="dateElement"></h2>
+	<h2 id="timeElement"></h2>
+
+	<script>
+		function getDate(){
+			let monthes = ["січня", "лютого", "березня", "квітня", 
+			               "травня", "червня", "липня", "серпня", 
+			               "вересня", "жовтня", "листопада", "грудня"];
+			let days = ["неділя", "понеділок", "вівторок", "середа", 
+			            "четвер", "п'ятниця", "субота"];
+			let date = new Date();
+
+			let weekDay = days[date.getDay()];
+			let day = date.getDate();
+			let month = monthes[date.getMonth()];
+			let year = date.getFullYear();
+
+			return weekDay + ", " + day + " " + month + " " + year + " р.";
+		}
+		function getTime(){
+			let date = new Date();
+			let hour = date.getHours();
+			let minute = date.getMinutes();
+			let second = date.getSeconds();
+			return hour + ":" + minute + ":" + second;
+		}
+		
+		document.getElementById("dateElement").innerHTML = getDate();
+		document.getElementById("timeElement").innerHTML = getTime();
+	</script>
+</body>
+</html>
