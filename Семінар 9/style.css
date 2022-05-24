@@ -1,0 +1,63 @@
+*{
+	box-sizing: border-box;
+    -moz-user-select: none; 
+    -webkit-user-select: none; 
+    -ms-user-select:none;
+    user-select:none;
+    -o-user-select:none;
+}
+
+.input-table{
+	width: 810px;
+	background-color: rgb(173,216,230);
+}
+
+.row-1{
+	font-size: 17px;
+}
+
+#book-select{
+	width: 220px;
+	height: 20px;
+}
+
+#book-count{
+	width: 90px;
+}
+#book-total-price{
+	width: 90px;
+}
+
+#final-total-price{
+	width: 110px;
+}
+#final-total-price-button{
+	width: 100px;
+}
+
+#customer-name{
+	width: 175px;
+}
+#customer-address{
+	width: 175px;
+}
+
+
+.input-invalid{
+	background-color: orange;
+}
+
+
+#output{
+	margin-top: 30px;
+	display: none;
+}
+#output-table{
+	width: 810px;
+	background-color: rgb(239,228,176);
+	text-align: center;
+}
+#output-table tr td{
+	width: 90px;
+	overflow-wrap: anywhere;
+}

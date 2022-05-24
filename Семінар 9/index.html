@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<form id="input-form">
+			<table class="input-table" border bordercolor="black">
+				<tr>
+					<td class="row-1" align="center">
+						Замовлення на придбання товару
+					</td>
+				</tr>
+				<tr>
+					<td class="row-2">
+						Назва товару<br>
+						<select id="book-select">
+							<option>Гарі Потер - 20.5</option>
+							<option>Марсіянин - 28.65</option>
+							<option>Найкоротша історія часу - 35.9</option>
+							<option>Володар перснів - 31.75</option>
+							<option>Гобіт, або Туди і звідти - 15.3</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td class="row-3">
+						Кількість:
+						<input id="book-count" type="number" value="0" min="0" max="1000" step="1">
+						Вартість:
+						<input id="book-total-price" type="text" readonly>
+					</td>
+				</tr>
+				<tr>
+					<td class="row-4">
+						Спосіб доставки замовлення<br>
+						<label>
+							<input id="delivery-method-1" type="radio" name="delivery-method" checked>
+							Поштою
+						</label><br>
+						<label>
+							<input id="delivery-method-2" type="radio" name="delivery-method">
+							Доставка до дому
+						</label><br>
+						<label>
+							<input id="holiday-packaging" type="checkbox">
+							У святковій упаковці
+						</label>
+					</td>
+				</tr>
+				<tr>
+					<td class="row-5" align="right">
+						Загальна вартість замовлення
+						<input id="final-total-price" type="text" readonly>
+						<button id="final-total-price-button">Підрахувати</button>
+					</td>
+				</tr>
+				<tr>
+					<td class="row-6">
+						Дані замовника<br>
+						Ім'я:
+						<input id="customer-name" type="text">
+						Адреса:
+						<input id="customer-address" type="text">
+					</td>
+				</tr>
+				<tr>
+					<td class="row-7" align="right">
+						<button id="reset-button" type="reset">Відновити початкові значення полів</button>
+						<button type="submit">Відіслати дані</button>
+					</td>
+				</tr>
+			</table>
+		</form>
+		<div id="output">
+			<table id="output-table" border bordercolor="black">
+				<tr>
+					<td>Назва товару</td>
+					<td>Кількість</td>
+					<td>Вартість</td>
+					<td>Доставка</td>
+					<td>Святкова упаковка</td>
+					<td>Загальна вартість</td>
+					<td>Ім'я</td>
+					<td>Адреса</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
