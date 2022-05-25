@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>5</title>
+	<style>
+		.container{
+			position: absolute;
+		}
+		#slides-container{
+			position: relative;
+			border: 2px solid rgb(0,0,0);
+			border-radius: 5px;
+		}
+		#slides-buttons-container{
+			position: absolute;
+			display: flex;
+			justify-content: space-between;
+			font-size: 300px;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+		}
+
+
+		#slides{
+			position: relative;
+			width: 100%;
+			height: 100%;
+			background-image: url("");
+			background-size: contain;
+			background-position: center;
+			background-repeat: no-repeat;
+			opacity: 1;
+		}
+		#slides.hidden{
+		    opacity: 0;
+		}
+
+		#slides-prev, #slides-next{
+			background-image: url("https://i.imgur.com/w9TfPzX.png");
+			width: 30px;
+			height: 60px;
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: 0px 15px;
+			background-color: rgb(209,209,209);
+			transition: ease-in-out 0.1s;
+			border-radius: 5px;
+		}
+		#slides-next{
+			transform: scaleX(-1);
+		}
+		#slides-prev:hover, #slides-next:hover{
+			cursor: pointer;
+			background-color: rgb(230,230,230);
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+    	<div id="slides-container">
+    		<div id="slides"></div>
+    	</div>
+    	<div id="slides-buttons-container">
+	    	<div id="slides-prev"></div>
+	    	<div id="slides-next"></div>
+    	</div>
+    </div>
+	
+	<script type="text/javascript">
+		let images = [
+		    "http://cdn.wallpaperhi.com/1152x864/20120117/71518.jpg",
+		    "https://c4.wallpaperflare.com/wallpaper/291/395/785/kitten-in-grass-wallpaper-preview.jpg",
+		    "https://wallup.net/wp-content/uploads/2018/10/07/605966-cat-animal-cats-beautiful-lovely-cute-animals-748x468.jpg",
+		    "https://images2.alphacoders.com/286/286602.jpg",
+		    "https://c4.wallpaperflare.com/wallpaper/850/74/381/cats-cat-animal-baby-animal-wallpaper-thumb.jpg",
+		    "https://www.desicomments.com/wallpapers/wp-content/uploads/2016/01/White-Kitten-On-Grass-DC10013.jpg",
+		    "https://live.staticflickr.com/4194/34819835655_736b908141_b.jpg",
+		    "https://wallup.net/wp-content/uploads/2018/10/06/708239-kittens-kitten-cat-cats-baby-cute-s-748x468.jpg",
+		    "https://c4.wallpaperflare.com/wallpaper/306/639/708/kitten-walking-grass-desktop-brown-tabby-kitten-wallpaper-preview.jpg"];
+		let imageDuration = 6000; //час на 1 слайд
+		let transDuration = 2000; //час переходу між слайдами
+		let width = 700;          //ширина контейнера для слайда
+		let height = 500;         //висота контейнера для слайда
+		let offset = 50;          //відступ кнопок від країв контейнера
+
+
+		document.getElementById("slides").style.transition = "opacity "+transDuration+"ms";
+		document.getElementById("slides-container").style.width = width+"px";
+		document.getElementById("slides-container").style.height = height+"px";
+		document.getElementById("slides-buttons-container").style.width = width-2*offset+"px";
+
+
+
+		let sliderObj = document.getElementById("slides");
+		let prevButtonObj = document.getElementById("slides-prev");
+		let nextButtonObj = document.getElementById("slides-next");
+		let currSlide = 0;
+		let timer;
+
+		function slidesShow(){
+		    sliderObj.className += "hidden";
+		    setTimeout(() => {
+		        sliderObj.style.backgroundImage = "url('"+images[currSlide]+"')";
+		        sliderObj.className = "";
+		    }, transDuration);
+		    currSlide++;
+		    currSlide %= images.length;
+		    timer = setTimeout(slidesShow, imageDuration);
+		}
+		prevButtonObj.onclick = () => {
+		    clearTimeout(timer);
+		    currSlide--;
+		    if(currSlide<0)
+		        currSlide = images.length-1;
+		    sliderObj.style.backgroundImage = "url('"+images[currSlide]+"')";
+		    timer = setTimeout(slidesShow, imageDuration);
+		}
+		nextButtonObj.onclick = () => {
+		    clearTimeout(timer);
+		    currSlide++;
+		    currSlide %= images.length;
+		    sliderObj.style.backgroundImage = "url('"+images[currSlide]+"')";
+		    timer = setTimeout(slidesShow, imageDuration);
+		}
+
+		slidesShow();
+	</script>
+</body>
+</html>
