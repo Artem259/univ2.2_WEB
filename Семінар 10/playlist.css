@@ -1,0 +1,28 @@
+#clearAllButton{
+	box-shadow: inset 0 0 10px rgba(255,0,0,0.6);
+	border-color: rgba(255,0,0,0.6);
+}
+
+.deleteButton{
+	display: inline-block;
+	position: relative;
+	top: 4px;
+	width: 15px;
+	height: 15px;
+	margin-right: 5px;
+	background-image: url("https://thumbs.dreamstime.com/b/check-marks-red-cross-icon-simple-vector-illustration-140098693.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.deleteButton:hover{
+	cursor: pointer;
+}
+
+#playlist > li{
+	cursor: default;
+	-moz-user-select: none; 
+	-webkit-user-select: none; 
+	-ms-user-select:none; 
+ 	user-select:none;
+ 	-o-user-select:none;
+}
